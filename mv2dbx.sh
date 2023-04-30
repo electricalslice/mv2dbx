@@ -134,6 +134,8 @@ parse_config() {
       export EXEC_AS_MONITOR=0
       echo -ne "Running as a one time script.\n"
     fi
+  else
+    export EXEC_AS_MONITOR=1
   fi
 
   # if config entry MV2DBX_HANDLE_EXISTING is not found, make it default to false
