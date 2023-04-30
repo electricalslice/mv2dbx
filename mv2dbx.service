@@ -1,0 +1,11 @@
+# Create a symbolic link to this file in /etc/systemd/system and
+# use systemctl to enable and monitor service.
+[Unit]
+Description=Monitors directory for new files and moves them to Dropbox.
+
+[Service]
+Type=simple
+ExecStart=/bin/bash /home/user/mv2dbx.sh
+
+[Install]
+WantedBy=multi-user.target
